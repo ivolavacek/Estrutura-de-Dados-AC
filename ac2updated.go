@@ -32,13 +32,13 @@ func main() {
 		case 1:
 			// Adiciona contato - funcionando ok
 			/*
-			Modo novo de usar fmt.Scan - NÃO ESTÁ FUNCIONANDO
+			//Modo novo de usar fmt.Scan - NÃO ESTÁ FUNCIONANDO
+			var nome string
 			leitor := bufio.NewReader(os.Stdin)
-			fmt.Println("Informe o nome:")
-			nome, _ := leitor.ReadString('\r')
+			fmt.Print("Informe o nome:")
+			nome, _ = leitor.ReadString('\r')
 			*/
 			var nome string
-
 			fmt.Print("Contato de: ");
 			fmt.Scan(&nome)
 			adicionaContato(nome, &contatos)
