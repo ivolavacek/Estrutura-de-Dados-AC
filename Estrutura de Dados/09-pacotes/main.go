@@ -1,12 +1,15 @@
 package main
 
 import (
-	"fmt"
+	f "fmt"
 	"projeto/utils"
+	"projeto/utils/outroUtils"
 )
 
 func main() {
-	fmt.Println("Olá, mundo!")
+	f.Println("Olá, mundo!")
 
-	fmt.Println(utils.Somar(4.5, 2.2))
+	f.Println(utils.Somar(4.5, 2.2))
+	f.Println(utils.Multiplicar(4.5, 2.2))
+	f.Println(outroutils.Dividir(8.2, 4.1))
 }
