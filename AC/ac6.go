@@ -30,18 +30,18 @@ func main() {
 func insereOrd(v *[M]int, n *int, novoValor int) {
 	fmt.Println("Tentando inserir:", novoValor)
 	if *n < M {
-		if buscaBin(*v, *n, novoValor) == -1 {
+		if buscaBin(*v, *n, novoValor) == -1 { // confere se 'novoValor' ja existe na lista
 			fmt.Println(novoValor, "não encontrado na lista, inserindo agora")
 			i := *n - 1
 			for i >= 0 {
-				if v[i] > novoValor {
+				if v[i] > novoValor { // para todo valor maior que o 'novoValor', coloca um índice a direita, sabendo que não há valores repetidos
 					v[i + 1] = v[i]
 				} else {
 					break
 				}
-				i--
+				i-- // diminui o índice para percorrer a lista da direta para esquerda
 			}
-			v[i + 1] = novoValor
+			v[i + 1] = novoValor // adiciona o 'novoValor' no primeiro espaço em que 'novoValor' < v[i]
 			*n++
 		} else {
 			fmt.Println(novoValor, "já existe na lista")
